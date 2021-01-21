@@ -6,10 +6,13 @@ console.log(`У списку ${categoriesQuantity} категорії`);
 
 //Для кожного елемента li.item в списку ul#categories, знайде і виведе в консоль текст заголовка елемента (тега h2) і кількість елементів в категорії (всіх вкладених в нього елементів li).
 
+
+
 for (const category of categoriesRef) {
-	const categoryTitle = category.children[0].textContent;
+	const categoryTitleRef = category.querySelector('h2');
+	const categoryTitle = categoryTitleRef.textContent;
 	console.log(`Категорія: ${categoryTitle}`);
 
-	const elementsQuantity = category.children[1].children.length;
+	const elementsQuantity = category.querySelector('ul').children.length;
 	console.log(`Кількість елементів: ${elementsQuantity}`);
 }
