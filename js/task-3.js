@@ -18,7 +18,7 @@ const images = [
 
 const createImage = image => {
 	const imgRef = document.createElement('img');
-	imgRef.classList.add('image');
+	imgRef.classList.add('js-image');
 	imgRef.setAttribute('src', image.url);
 	imgRef.setAttribute('alt', image.alt);
 	return imgRef;
