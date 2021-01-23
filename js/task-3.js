@@ -16,16 +16,8 @@ const images = [
   },
 ];
 
-const createImage = image => {
-	const imgRef = document.createElement('img');
-	imgRef.classList.add('js-image');
-	imgRef.setAttribute('src', image.url);
-	imgRef.setAttribute('alt', image.alt);
-	return imgRef;
-}
-
-const imgagesMarkup = images.map(image => createImage(image))
-console.dir(imgagesMarkup);
-
-const galeryImagesRef = document.querySelector('#gallery');
-galeryImagesRef.append(...imgagesMarkup)
+const galleryRef = document.querySelector('#gallery');
+images.forEach(image => {
+	const imageMarkup = `<li><img class="js-image" src="${image.url}" alt="${image.alt}"></li>`
+	galleryRef.insertAdjacentHTML('beforeend', imageMarkup)
+})

@@ -1,4 +1,3 @@
-
 const sizeControlRef = document.querySelector('#font-size-control');
 const textRef = document.querySelector('#text');
 

@@ -1,12 +1,20 @@
 #gallery{
+	list-style-type: none;
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	flex-direction: row;
+	padding: 0;
   margin: -15px;
 }
 
-.js-image{
-	width: calc((100% - 3 * 30px) / 3); 
+li{
 	margin: 15px;
+}
+
+.js-image{
+	width: 100%;
+	margin: 15px;
+	border-radius: 4px;
 }
 
 .js-image:hover {
